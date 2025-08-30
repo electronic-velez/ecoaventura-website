@@ -1,10 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-import firebase from "astro-firebase";
-
 // https://astro.build/config
 export default defineConfig({
-  integrations: [firebase()]
+  integrations: []
 });
-
-// Trigger new deployment
