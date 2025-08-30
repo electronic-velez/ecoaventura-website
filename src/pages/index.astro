@@ -13,6 +13,7 @@
     <style>
         :root {
             --green: #28a745;
+            --eco-green: #2E8B57;
             --white: #ffffff;
             --blue: #007bff;
             --light-gray: #f8f9fa;
@@ -32,7 +33,7 @@
         header {
             padding: 1rem 2rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: var(--white);
             position: sticky;
@@ -40,10 +41,17 @@
             z-index: 1000;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
+        
         .logo {
             max-width: 150px;
             height: auto;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
         }
 
         .hero {
@@ -99,6 +107,17 @@
             background-color: var(--blue);
             color: var(--white);
         }
+        
+        .btn-eco {
+            background-color: var(--eco-green);
+            color: var(--white);
+            border: 2px solid var(--eco-green);
+        }
+
+        .btn-eco:hover {
+            background-color: var(--white);
+            color: var(--eco-green);
+        }
 
         section {
             padding: 4rem 2rem;
@@ -108,7 +127,7 @@
         section h2 {
             font-size: 2.5rem;
             color: var(--dark-gray);
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
         }
 
         section p {
@@ -117,35 +136,76 @@
             line-height: 1.8;
         }
 
-        #mission {
-            background-color: var(--white);
-        }
-
-        #aventureros-en-ruedas {
-            background-color: var(--light-gray);
-        }
-
-        #ecoaventura {
-            background-color: var(--white);
-        }
-
-        #downloads {
-            background-color: var(--light-gray);
-        }
-
-        .download-buttons {
+        .card-container {
             display: flex;
             justify-content: center;
-            gap: 1rem;
             flex-wrap: wrap;
+            gap: 2rem;
         }
-        
-        .download-buttons .btn {
-            padding: 1rem 2rem;
+
+        .card {
+            background: var(--white);
             border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 320px;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--dark-gray);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .card .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+        }
+
+        #testimonios {
+            background-color: var(--light-gray);
+        }
+        
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        #instagram-feed {
+            background-color: var(--white);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .instagram-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         footer {
@@ -159,6 +219,12 @@
         }
 
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            nav {
+                margin-top: 1rem;
+            }
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -174,41 +240,109 @@
 <body>
     <header>
         <img src="/aventureros.PNG" alt="Logo Fundación Aventureros" class="logo">
+        <nav>
+            <a href="#tours">Tours y Destinos</a>
+            <a href="#ecoaventureros">Programa EcoAventureros</a>
+            <a href="#testimonios">Testimonios</a>
+        </nav>
     </header>
 
     <main>
         <section class="hero" id="hero">
             <h1>Fundación Aventureros</h1>
-            <h2>Donde la pasión por el patinaje se une a la acción por el planeta.</h2>
+            <h2>Donde la pasión por la aventura se une a la acción por el planeta.</h2>
             <div class="hero-buttons">
-                <a href="#mission" class="btn btn-primary">Nuestra Misión</a>
-                <a href="#downloads" class="btn btn-secondary">Descargas</a>
+                <a href="#tours" class="btn btn-primary">Ver Aventuras</a>
+                <a href="#ecoaventureros" class="btn btn-secondary">Únete al Reciclaje</a>
             </div>
         </section>
 
-        <section id="mission">
-            <h2>Inspirando Comunidad y Sostenibilidad</h2>
-            <p>La Fundación Aventureros es más que un club; es un movimiento. A través de nuestro programa 'Aventureros en Ruedas', promovemos la disciplina y los valores en nuestra juventud. Con 'EcoAventura', empoderamos a las comunidades para que se unan a la transformación ambiental.</p>
-        </section>
-
-        <section id="aventureros-en-ruedas">
-            <h2>Unidos por el Patinaje</h2>
-            <p>Fomentamos el trabajo en equipo, la superación y el respeto a través del deporte. Ofrecemos un espacio seguro para el desarrollo personal y físico de nuestros jóvenes.</p>
-        </section>
-
-        <section id="ecoaventura">
-            <h2>El Futuro del Reciclaje</h2>
-            <p>Nuestra iniciativa tecnológica que conecta a la comunidad con el proceso de reciclaje. A través de nuestra aplicación, puedes hacer un seguimiento en tiempo real de las rutas de recolección y solicitar servicios a domicilio de forma sencilla.</p>
-        </section>
-
-        <section id="downloads">
-            <h2>Únete a la Aventura</h2>
-            <p>Descarga la aplicación 'EcoAventura' y sé parte del cambio. Elige tu rol y transforma tu comunidad.</p>
-            <div class="download-buttons">
-                <a href="#" class="btn btn-primary">Descargar App de Usuario</a>
-                <a href="#" class="btn btn-secondary">Descargar App de Conductor</a>
+        <section id="tours">
+            <h2>Tours y Destinos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Aventura+en+Montaña" alt="Aventura en Montaña">
+                    <div class="card-content">
+                        <h3>Trekking a la Cumbre</h3>
+                        <p>Duración: 3 días</p>
+                        <p>Precio: $300</p>
+                        <a href="#" class="btn btn-primary">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Kayak+en+Río" alt="Kayak en Río">
+                    <div class="card-content">
+                        <h3>Descenso del Río Rápido</h3>
+                        <p>Duración: 1 día</p>
+                        <p>Precio: $120</p>
+                        <a href="#" class="btn btn-primary">Reservar ahora</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Ciclismo+de+Montaña" alt="Ciclismo de Montaña">
+                    <div class="card-content">
+                        <h3>Ruta del Cóndor</h3>
+                        <p>Duración: 2 días</p>
+                        <p>Precio: $250</p>
+                        <a href="#" class="btn btn-primary">Reservar ahora</a>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="ecoaventureros" style="background-color: var(--light-gray);">
+            <h2>Programa EcoAventureros</h2>
+            <p>Nuestra iniciativa que transforma a la comunidad a través del reciclaje. Conviértete en un héroe del medio ambiente.</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Plástico" alt="Reciclaje de Plástico">
+                    <div class="card-content">
+                        <h3>Recolección de Plástico</h3>
+                        <p>Ayúdanos a recolectar y reciclar botellas y otros plásticos.</p>
+                        <a href="#" class="btn btn-eco">Únete al programa</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Papel" alt="Reciclaje de Papel">
+                    <div class="card-content">
+                        <h3>Campaña de Papel y Cartón</h3>
+                        <p>Participa en nuestras jornadas de recolección de papel y cartón.</p>
+                        <a href="#" class="btn btn-eco">Más información</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Vidrio" alt="Reciclaje de Vidrio">
+                    <div class="card-content">
+                        <h3>Misión Vidrio</h3>
+                        <p>El vidrio es 100% reciclable. ¡Ayúdanos a darle una nueva vida!</p>
+                        <a href="#" class="btn btn-eco">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonios">
+            <h2>Testimonios de Nuestra Comunidad</h2>
+            <div class="testimonial">
+                <p>"¡El trekking a la cumbre fue una experiencia inolvidable! La organización de Aventureros es impecable."</p>
+                <p><strong>- Alex, Participante del Tour</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Ser parte de EcoAventureros me ha hecho sentir que realmente estoy haciendo una diferencia en mi comunidad. ¡Es gratificante!"</p>
+                <p><strong>- María, Voluntaria de Reciclaje</strong></p>
+            </div>
+        </section>
+
+        <section id="instagram-feed">
+            <h2>Nuestras Aventuras en Instagram</h2>
+            <div class="instagram-grid">
+                <img src="https://via.placeholder.com/250x250.png?text=Aventura+1" alt="Instagram Aventura 1">
+                <img src="https://via.placeholder.com/250x250.png?text=Reciclaje+1" alt="Instagram Reciclaje 1">
+                <img src="https://via.placeholder.com/250x250.png?text=Aventura+2" alt="Instagram Aventura 2">
+                <img src="https://via.placeholder.com/250x250.png?text=Reciclaje+2" alt="Instagram Reciclaje 2">
+            </div>
+        </section>
+
     </main>
 
     <footer>
