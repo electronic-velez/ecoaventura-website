@@ -1,7 +1,7 @@
+
 ---
-// No se necesita lógica de servidor para esta página estática.
+// No se necesita lógica de servidor aquí por ahora
 ---
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,355 +9,237 @@
     <title>Fundación Aventureros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --green: #28a745;
-            --eco-green: #2E8B57;
-            --white: #ffffff;
-            --blue: #007bff;
-            --light-gray: #f8f9fa;
-            --dark-gray: #343a40;
-            --text-color: #495057;
+            --green-500: #4CAF50;
+            --green-700: #2A6E48;
+            --green-300: #66BB6A;
         }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
+        html {
             scroll-behavior: smooth;
-            background-color: var(--white);
-            color: var(--text-color);
         }
-
-        header {
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .logo {
-            max-width: 150px;
-            height: auto;
-        }
-
-        nav a {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: var(--dark-gray);
-            font-weight: 600;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 2rem;
-            background-color: var(--light-gray);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--dark-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .hero h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--text-color);
-            margin-bottom: 2rem;
-        }
-
-        .hero-buttons .btn {
-            margin: 0 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--green);
-            color: var(--white);
-            border: 2px solid var(--green);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--white);
-            color: var(--green);
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--blue);
-            border: 2px solid var(--blue);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--blue);
-            color: var(--white);
-        }
-        
-        .btn-eco {
-            background-color: var(--eco-green);
-            color: var(--white);
-            border: 2px solid var(--eco-green);
-        }
-
-        .btn-eco:hover {
-            background-color: var(--white);
-            color: var(--eco-green);
-        }
-
-        section {
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: var(--dark-gray);
-            margin-bottom: 3rem;
-        }
-
-        section p {
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            line-height: 1.8;
-        }
-
-        .card-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 320px;
-            text-align: left;
-            overflow: hidden;
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: var(--dark-gray);
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .card .btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        #testimonios {
-            background-color: var(--light-gray);
-        }
-        
-        .testimonial {
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-        }
-
-        #instagram-feed {
-            background-color: var(--white);
-        }
-
-        .instagram-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .instagram-grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        footer {
-            padding: 2rem;
-            background-color: var(--dark-gray);
-            text-align: center;
-        }
-        
-        footer .logo {
-          filter: brightness(0) invert(1);
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            nav {
-                margin-top: 1rem;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero h2 {
-                font-size: 1.2rem;
-            }
-            section h2 {
-                font-size: 2rem;
-            }
+        body {
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <header>
-        <img src="/aventureros.PNG" alt="Logo Fundación Aventureros" class="logo">
-        <nav>
-            <a href="#tours">Tours y Destinos</a>
-            <a href="#ecoaventureros">Programa EcoAventureros</a>
-            <a href="#testimonios">Testimonios</a>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header y Navegación -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-700">
+                <a href="#home">Logo</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-green-500">Inicio</a>
+                <a href="#proyectos" class="hover:text-green-500">Proyectos</a>
+                <a href="#inscripcion" class="hover:text-green-500">Inscripciones</a>
+                <a href="#noticias" class="hover:text-green-500">Noticias</a>
+                <a href="#reciclaje" class="hover:text-green-500">Reciclaje</a>
+                <a href="#vision" class="hover:text-green-500">Visión y Valores</a>
+                <a href="#contacto" class="hover:text-green-500">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
     </header>
 
+    <!-- Menú Lateral Móvil -->
+    <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+        <div class="p-6">
+            <div class="text-2xl font-bold text-green-700 mb-8">
+                <a href="#home">Aventureros</a>
+            </div>
+            <a href="#home" class="block py-2 hover:text-green-500">Inicio</a>
+            <a href="#proyectos" class="block py-2 hover:text-green-500">Proyectos</a>
+            <a href="#inscripcion" class="block py-2 hover:text-green-500">Inscripciones</a>
+            <a href="#noticias" class="block py-2 hover:text-green-500">Noticias</a>
+            <a href="#reciclaje" class="block py-2 hover:text-green-500">Reciclaje</a>
+            <a href="#vision" class="block py-2 hover:text-green-500">Visión y Valores</a>
+            <a href="#contacto" class="block py-2 hover:text-green-500">Contacto</a>
+        </div>
+    </div>
+
     <main>
-        <section class="hero" id="hero">
-            <h1>Fundación Aventureros</h1>
-            <h2>Donde la pasión por la aventura se une a la acción por el planeta.</h2>
-            <div class="hero-buttons">
-                <a href="#tours" class="btn btn-primary">Ver Aventuras</a>
-                <a href="#ecoaventureros" class="btn btn-secondary">Únete al Reciclaje</a>
-            </div>
-        </section>
-
-        <section id="tours">
-            <h2>Tours y Destinos</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Aventura+en+Montaña" alt="Aventura en Montaña">
-                    <div class="card-content">
-                        <h3>Trekking a la Cumbre</h3>
-                        <p>Duración: 3 días</p>
-                        <p>Precio: $300</p>
-                        <a href="#" class="btn btn-primary">Reservar ahora</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Kayak+en+Río" alt="Kayak en Río">
-                    <div class="card-content">
-                        <h3>Descenso del Río Rápido</h3>
-                        <p>Duración: 1 día</p>
-                        <p>Precio: $120</p>
-                        <a href="#" class="btn btn-primary">Reservar ahora</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Ciclismo+de+Montaña" alt="Ciclismo de Montaña">
-                    <div class="card-content">
-                        <h3>Ruta del Cóndor</h3>
-                        <p>Duración: 2 días</p>
-                        <p>Precio: $250</p>
-                        <a href="#" class="btn btn-primary">Reservar ahora</a>
-                    </div>
+        <!-- Sección Inicio -->
+        <section id="home" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl font-bold text-green-700">Fundación Aventureros</h1>
+                <p class="mt-4 text-xl text-gray-600">Transformando comunidades a través de la aventura y la educación.</p>
+                <img src="https://placehold.co/1200x600/4CAF50/FFFFFF" alt="Imagen de bienvenida" class="mx-auto mt-8 rounded-lg shadow-lg">
+                <div class="mt-12 text-left max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-800">Nuestra Historia</h2>
+                    <p class="mt-4 text-gray-600">Texto de marcador de posición sobre la historia de la fundación. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mt-8">Nuestra Misión</h2>
+                    <p class="mt-4 text-gray-600">Texto de marcador de posición sobre la misión de la fundación. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
             </div>
         </section>
 
-        <section id="ecoaventureros" style="background-color: var(--light-gray);">
-            <h2>Programa EcoAventureros</h2>
-            <p>Nuestra iniciativa que transforma a la comunidad a través del reciclaje. Conviértete en un héroe del medio ambiente.</p>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Plástico" alt="Reciclaje de Plástico">
-                    <div class="card-content">
-                        <h3>Recolección de Plástico</h3>
-                        <p>Ayúdanos a recolectar y reciclar botellas y otros plásticos.</p>
-                        <a href="#" class="btn btn-eco">Únete al programa</a>
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800">Nuestros Proyectos</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <!-- Proyecto 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/66BB6A/FFFFFF" alt="Proyecto 1" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-bold text-green-700">EcoAventura</h3>
+                        <p class="mt-2 text-gray-600">Fomentamos el reciclaje y la conciencia ambiental a través de actividades al aire libre.</p>
+                        <a href="#" class="text-blue-500 mt-4 inline-block">Ver en Facebook</a>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/66BB6A/FFFFFF" alt="Proyecto 2" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-bold text-green-700">Aventureros en Ruedas</h3>
+                        <p class="mt-2 text-gray-600">Clases de patinaje para niños y jóvenes, promoviendo el deporte y la vida sana.</p>
+                        <a href="#" class="text-blue-500 mt-4 inline-block">Ver en Facebook</a>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="https://placehold.co/600x400/66BB6A/FFFFFF" alt="Proyecto 3" class="rounded-lg mb-4">
+                        <h3 class="text-2xl font-bold text-green-700">Lectura al Aire Libre</h3>
+                        <p class="mt-2 text-gray-600">Sesiones de lectura en parques para fomentar el amor por los libros y la naturaleza.</p>
+                        <a href="#" class="text-blue-500 mt-4 inline-block">Ver en Facebook</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Papel" alt="Reciclaje de Papel">
-                    <div class="card-content">
-                        <h3>Campaña de Papel y Cartón</h3>
-                        <p>Participa en nuestras jornadas de recolección de papel y cartón.</p>
-                        <a href="#" class="btn btn-eco">Más información</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/320x200.png?text=Reciclaje+de+Vidrio" alt="Reciclaje de Vidrio">
-                    <div class="card-content">
-                        <h3>Misión Vidrio</h3>
-                        <p>El vidrio es 100% reciclable. ¡Ayúdanos a darle una nueva vida!</p>
-                        <a href="#" class="btn btn-eco">Más información</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="testimonios">
-            <h2>Testimonios de Nuestra Comunidad</h2>
-            <div class="testimonial">
-                <p>"¡El trekking a la cumbre fue una experiencia inolvidable! La organización de Aventureros es impecable."</p>
-                <p><strong>- Alex, Participante del Tour</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Ser parte de EcoAventureros me ha hecho sentir que realmente estoy haciendo una diferencia en mi comunidad. ¡Es gratificante!"</p>
-                <p><strong>- María, Voluntaria de Reciclaje</strong></p>
             </div>
         </section>
 
-        <section id="instagram-feed">
-            <h2>Nuestras Aventuras en Instagram</h2>
-            <div class="instagram-grid">
-                <img src="https://via.placeholder.com/250x250.png?text=Aventura+1" alt="Instagram Aventura 1">
-                <img src="https://via.placeholder.com/250x250.png?text=Reciclaje+1" alt="Instagram Reciclaje 1">
-                <img src="https://via.placeholder.com/250x250.png?text=Aventura+2" alt="Instagram Aventura 2">
-                <img src="https://via.placeholder.com/250x250.png?text=Reciclaje+2" alt="Instagram Reciclaje 2">
+        <!-- Sección Inscripciones -->
+        <section id="inscripcion" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800">Inscripciones</h2>
+                <p class="mt-4 text-gray-600">Únete a nuestras actividades. Días: Sábados y Domingos. Horarios: 10am - 4pm.</p>
+                <form class="mt-8 max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-inner">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Nombre" class="w-full p-3 rounded-lg border border-gray-300">
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" placeholder="Correo Electrónico" class="w-full p-3 rounded-lg border border-gray-300">
+                    </div>
+                    <div class="mb-4">
+                        <textarea placeholder="Mensaje" class="w-full p-3 rounded-lg border border-gray-300" rows="4"></textarea>
+                    </div>
+                    <button type="button" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700">Enviar</button>
+                </form>
             </div>
         </section>
 
+        <!-- Sección Noticias -->
+        <section id="noticias" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800">Últimas Noticias</h2>
+                <div class="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-green-700">Noticia 1</h3>
+                        <p class="mt-2 text-gray-600">Texto de ejemplo para la primera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-green-700">Noticia 2</h3>
+                        <p class="mt-2 text-gray-600">Texto de ejemplo para la segunda noticia. Duis aute irure dolor in reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asistente de Ayuda -->
+        <section id="asistente" class="py-20 bg-gray-200">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800">Asistente de Ayuda</h2>
+                 <div class="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+                    <div class="h-64 overflow-y-auto border border-gray-300 rounded-lg p-4 mb-4">
+                        <!-- Marcador de posición para mensajes del chat -->
+                        <p class="text-gray-500">El chatbot está aquí...</p>
+                    </div>
+                    <div class="flex">
+                        <input type="text" placeholder="Escribe tu pregunta..." class="w-full p-3 rounded-l-lg border border-gray-300">
+                        <button type="button" class="bg-green-500 text-white px-6 py-3 rounded-r-lg font-bold hover:bg-green-700">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reciclaje -->
+        <section id="reciclaje" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800">Punto de Reciclaje</h2>
+                <p class="mt-4 text-center text-gray-600">Colabora con nosotros y ayúdanos a cuidar el planeta. Recibimos materiales reciclables de todo tipo.</p>
+                <form class="mt-8 max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-inner">
+                    <p class="mb-4 text-gray-600">Selecciona tu perfil:</p>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="perfil" class="form-radio text-green-500">
+                            <span class="ml-2">Usuario General</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="perfil" class="form-radio text-green-500">
+                            <span class="ml-2">Reciclador de Oficio</span>
+                        </label>
+                    </div>
+                    <button type="button" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 w-full">Registrarse</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección Visión y Valores -->
+        <section id="vision" class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-gray-800">Visión y Valores</h2>
+                <div class="grid md:grid-cols-2 gap-12 mt-12 text-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-700">Nuestra Visión</h3>
+                        <p class="mt-2 text-gray-600">Ser una fundación líder en la promoción del desarrollo sostenible y la formación de ciudadanos responsables con su entorno.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-700">Nuestros Valores</h3>
+                        <ul class="mt-2 text-gray-600 list-none">
+                            <li>Compromiso</li>
+                            <li>Respeto</li>
+                            <li>Solidaridad</li>
+                            <li>Aventura</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <footer id="contacto" class="bg-gray-800 text-white py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold">Contacto</h2>
+                <p class="mt-4">Teléfonos: +123 456 7890 / +098 765 4321</p>
+                <p class="mt-2">Email: <a href="mailto:info@aventureros.org" class="text-green-300 hover:underline">info@aventureros.org</a></p>
+                <div class="flex justify-center space-x-6 mt-6">
+                    <a href="#" class="hover:text-green-300">Facebook</a>
+                    <a href="#" class="hover:text-green-300">Instagram</a>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <footer>
-        <img src="/aventureros.PNG" alt="Logo Fundación Aventureros" class="logo">
-    </footer>
-    
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
         });
-      });
+
+        // Cierra el menú al hacer clic en un enlace
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+            });
+        });
     </script>
 </body>
 </html>
