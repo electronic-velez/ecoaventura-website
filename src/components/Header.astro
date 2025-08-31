@@ -1,0 +1,40 @@
+---
+---
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="/">
+                <img src="/images/aventureros.PNG" alt="EcoAventura" class="h-12">
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+            <a href="/#home" class="text-gray-600 hover:text-green-500">Inicio</a>
+            <a href="/#projects" class="text-gray-600 hover:text-green-500">Proyectos</a>
+            <a href="/#news" class="text-gray-600 hover:text-green-500">Noticias</a>
+            <a href="/#inscriptions" class="text-gray-600 hover:text-green-500">Inscripciones</a>
+            <a href="/#recycling" class="text-gray-600 hover:text-green-500">Reciclaje</a>
+            <a href="/#contact" class="text-gray-600 hover:text-green-500">Contacto</a>
+        </nav>
+        <div class="md:hidden">
+            <button id="menu-button" class="text-gray-600 hover:text-green-500 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white">
+        <a href="/#home" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Inicio</a>
+        <a href="/#projects" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Proyectos</a>
+        <a href="/#news" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Noticias</a>
+        <a href="/#inscriptions" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Inscripciones</a>
+        <a href="/#recycling" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Reciclaje</a>
+        <a href="/#contact" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Contacto</a>
+    </div>
+</header>
+
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
