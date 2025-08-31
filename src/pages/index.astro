@@ -2,129 +2,225 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="EcoAventura - Inicio">
-  <section id="home" class="relative h-screen">
-    <div class="swiper-container h-full">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="/images/campañas de reforetacion.jpg"
-            alt="Imagen 1"
-            class="w-full h-full object-cover filter brightness-110 saturate-110"
-          />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
-          >
-            <h1
-              class="text-white text-4xl md:text-6xl font-bold text-center"
-            >
-              Fundación EcoAventura
-            </h1>
-            <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Donde el deporte se une al medio ambiente</h2>
+<Layout title="Fundación EcoAventura">
+  <div class="swiper-container h-screen">
+    <div class="swiper-wrapper">
+      <!-- Slide 1: Inicio -->
+      <div class="swiper-slide">
+        <div class="swiper-container-nested h-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/campañas de reforetacion.jpg"
+                alt="Imagen 1"
+                class="w-full h-full object-cover filter brightness-110 saturate-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
+              >
+                <h1
+                  class="text-white text-4xl md:text-6xl font-bold text-center"
+                >
+                  Fundación EcoAventura
+                </h1>
+                <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Donde el deporte se une al medio ambiente</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/1.2.PNG"
+                alt="Imagen 2"
+                class="w-full h-full object-cover filter brightness-110 saturate-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
+              >
+                <h1
+                  class="text-white text-4xl md:text-6xl font-bold text-center"
+                >
+                  Fundación EcoAventura
+                </h1>
+                <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Impulsando el talento en patinaje</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/1.3.PNG"
+                alt="Imagen 3"
+                class="w-full h-full object-cover filter brightness-110 saturate-110"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
+              >
+                <h1
+                  class="text-white text-4xl md:text-6xl font-bold text-center"
+                >
+                  Fundación EcoAventura
+                </h1>
+                <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Cuidando el planeta, paso a paso</h2>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/1.2.PNG"
-            alt="Imagen 2"
-            class="w-full h-full object-cover filter brightness-110 saturate-110"
-          />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
-          >
-            <h1
-              class="text-white text-4xl md:text-6xl font-bold text-center"
-            >
-              Fundación EcoAventura
-            </h1>
-            <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Impulsando el talento en patinaje</h2>
-          </div>
+      </div>
+
+      <!-- Slide 2: Recicla -->
+      <div class="swiper-slide bg-green-100 p-8 overflow-y-auto">
+        <div class="container mx-auto">
+            <section class="py-12 px-4 bg-green-700 text-white">
+                <div class="container mx-auto text-center">
+                <h1 class="text-4xl font-bold mb-4">Centro de Acopio Comunitario (Proyecto Eco-Aventureros)</h1>
+                <p class="text-lg">Impulsando la Economía Circular y la Conciencia Ambiental, en un espacio propio. Establecimos un centro de acopio comunitario para la recolección, clasificación y venta de residuos sólidos aprovechables. Esta iniciativa generará ingresos adicionales para las familias rurales participantes y una parte para las actividades de los deportistas.</p>
+                </div>
+            </section>
+
+            <section class="py-12 px-4 bg-gray-100">
+                <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                    <h2 class="text-3xl font-bold mb-4">Cómo lo hacemos</h2>
+                    <p>En nuestro centro de acopio, seguimos un proceso cuidadoso para asegurarnos de que los materiales reciclables se gestionen de la manera más eficiente y sostenible posible. Desde la recolección hasta el procesamiento, cada paso está diseñado para maximizar la recuperación de recursos y minimizar el impacto ambiental.</p>
+                    <h3 class="text-2xl font-bold mt-6 mb-2">Materiales que aceptamos</h3>
+                    <ul>
+                        <li>Plástico (PET, HDPE)</li>
+                        <li>Papel y cartón</li>
+                        <li>Vidrio</li>
+                        <li>Metales (aluminio, acero)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <h2 class="text-3xl font-bold mb-4">Consejos para un Reciclaje Exitoso</h2>
+                    <p>Para asegurar que tus materiales puedan ser reciclados correctamente, te pedimos que los limpies y los separes antes de traerlos a nuestro centro. Aquí tienes algunos consejos:</p>
+                    <ul class="list-disc list-inside">
+                        <li>Lava las botellas y los envases para eliminar los restos de comida.</li>
+                        <li>Aplasta las latas y las botellas de plástico para ahorrar espacio.</li>
+                        <li>Separa el papel y el cartón del resto de los materiales.</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="py-12 px-4 bg-white">
+                <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Descargas</h2>
+                <p class="text-center mb-8">Descarga nuestras rutas de reciclaje para saber cuándo pasaremos por tu comunidad.</p>
+                <div class="text-center">
+                    <a href="/rutas-reciclaje.pdf" download class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Descargar Rutas</a>
+                </div>
+                </div>
+            </section>
+
+            <section class="py-12 px-4 bg-gray-100">
+                <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Suscripción</h2>
+                <p class="text-center mb-8">¡Únete a nuestra comunidad de reciclaje! Regístrate para recibir noticias, consejos y actualizaciones sobre nuestras rutas de recolección.</p>
+                <form class="max-w-lg mx-auto">
+                    <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo electrónico</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="tu@email.com">
+                    </div>
+                    <div class="text-center">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Suscribirme
+                    </button>
+                    </div>
+                </form>
+                </div>
+            </section>
         </div>
-        <div class="swiper-slide">
-          <img
-            src="/images/1.3.PNG"
-            alt="Imagen 3"
-            class="w-full h-full object-cover filter brightness-110 saturate-110"
-          />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
-          >
-            <h1
-              class="text-white text-4xl md:text-6xl font-bold text-center"
-            >
-              Fundación EcoAventura
-            </h1>
-            <h2 class="text-white text-xl md:text-3xl font-light text-center mt-2">Cuidando el planeta, paso a paso</h2>
-          </div>
+      </div>
+
+      <!-- Slide 3: Patinaje -->
+      <div class="swiper-slide bg-purple-100 p-8 overflow-y-auto">
+        <div class="container mx-auto">
+            <section class="py-12 px-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
+                <div class="container mx-auto text-center">
+                <h1 class="text-4xl font-bold mb-4">Escuela de Patinaje (Proyecto Aventureros en Ruedas)</h1>
+                <p class="text-lg">Formación Integral y Oportunidades para el Desarrollo Juvenil. Implementamos una escuela de patinaje como un espacio de formación deportiva y en valores. Este programa busca la prevención del consumo de sustancias psicoactivas, la violencia juvenil y la deserción escolar, ofreciendo una alternativa saludable y atractiva para el tiempo libre.</p>
+                </div>
+            </section>
+
+            <section class="py-12 px-4 bg-gray-100">
+                <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Nuestros Pequeños Gigantes</h2>
+                <div class="swiper-container-nested h-96">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                </div>
+            </section>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
 
-  <section id="maravillas" class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Maravillas de Nuestra Fundación</h2>
-      <div class="text-center">
-        <p class="text-lg">Nuestra Energía Transforma. De tres niños soñando en patines a una comunidad de más de 250 deportistas. Conoce cómo usamos la pasión por el patinaje para impulsar el cambio ambiental en nuestra comunidad. Cada zancada, cada salto, es un paso hacia un futuro más verde y sostenible. ¡Únete a la aventura!</p>
+      <!-- Slide 4: Historia -->
+      <div class="swiper-slide bg-gray-100 p-8 overflow-y-auto">
+        <div class="container mx-auto">
+            <section id="historia" class="py-12 px-4">
+                <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Nuestra Historia</h2>
+                <p class="text-lg">La Fundación Aventureros del deporte comenzó su labor en la comunidad del Carmen promoviendo y enseñando el patinaje el 10 de junio del 2021, gracias a un acto de solidaridad. Una pareja de entrenadores deciden enseñarles a patinar a tres niños que sin éxito intentaban ponerse de pie y desplazarse en sus patines. Al finalizar ese momento, se cuadraron las primeras sesiones de aprendizaje para estos niños, como un pequeño y corto servicio a la comunidad, pero surgió algo inesperado, el voz a voz llevó a que rápidamente se conformará un grupo de 30 niños provenientes del corregimiento y todos los alrededores. Este compromiso y acogida llevó a que se formara la escuela de patinaje aventureros en rueda que con el tiempo, evolucionó hacia una visión más completa, apostando por integrar el deporte con el cuidado del medio ambiente para cultivar niños y familias que piensen en un desarrollo sostenible. Así fue que hace un año se formalizó legalmente como Fundación Aventureros del deporte.</p>
+                </div>
+            </section>
+        </div>
       </div>
-    </div>
-  </section>
-  <section id="historia" class="py-12 px-4 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Nuestra Historia</h2>
-      <p class="text-lg">La Fundación Aventureros del deporte comenzó su labor en la comunidad del Carmen promoviendo y enseñando el patinaje el 10 de junio del 2021, gracias a un acto de solidaridad. Una pareja de entrenadores deciden enseñarles a patinar a tres niños que sin éxito intentaban ponerse de pie y desplazarse en sus patines. Al finalizar ese momento, se cuadraron las primeras sesiones de aprendizaje para estos niños, como un pequeño y corto servicio a la comunidad, pero surgió algo inesperado, el voz a voz llevó a que rápidamente se conformará un grupo de 30 niños provenientes del corregimiento y todos los alrededores. Este compromiso y acogida llevó a que se formara la escuela de patinaje aventureros en rueda que con el tiempo, evolucionó hacia una visión más completa, apostando por integrar el deporte con el cuidado del medio ambiente para cultivar niños y familias que piensen en un desarrollo sostenible. Así fue que hace un año se formalizó legalmente como Fundación Aventureros del deporte.</p>
-    </div>
-  </section>
 
-  <section id="mision-y-vision" class="py-12 px-4 bg-white">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Misión y Visión</h2>
-      <div class="mb-8">
-        <h3 class="text-2xl font-bold mb-2">Misión</h3>
-        <p class="text-lg">Conectar, inspirar y generar sentido de pertenencia en la comunidad a través del patinaje y la cultura del reciclaje, guiados por el profundo amor a nuestro entorno. Cultivar en cada niño, niña y joven un espíritu deportivo y ambientalmente consciente, capaz de construir un futuro próspero y sostenible para sus comunidades.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold mb-2">Visión 2028</h3>
-        <p class="text-lg">La Fundación se proyecta para el año 2028 como una entidad líder y referente en Colombia por la gestión deportiva, ambiental y social. Se espera que tengamos nuestro propio escenario "Eco-deportivo", con una pista de patinaje y más de 250 niños, niñas y jóvenes practicando patinaje y llevando sus sueños a lo más alto. También se espera lograr que el centro de acopio comunitario tenga una sostenibilidad del 90% en sus operaciones.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyectos" class="py-12 px-4 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Proyectos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/patinaje" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-          <img src="/images/patinaje-card.jpeg" alt="Patinaje" class="rounded-t-lg h-48 w-full object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Escuela de Patinaje</h3>
-          </div>
-        </a>
-        <a href="/acopio" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-          <img src="/images/acopio-card.jpeg" alt="Acopio" class="rounded-t-lg h-48 w-full object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Centro de Acopio</h3>
-          </div>
-        </a>
-        <a href="/desarrollo" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-          <img src="/images/desarrollo-card.jpeg" alt="Desarrollo Comunitario" class="rounded-t-lg h-48 w-full object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Desarrollo Comunitario</h3>
-          </div>
-        </a>
+      <!-- Slide 5: Misión y Visión -->
+      <div class="swiper-slide bg-white p-8 overflow-y-auto">
+        <div class="container mx-auto">
+            <section id="mision-y-vision" class="py-12 px-4">
+                <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Misión y Visión</h2>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-2">Misión</h3>
+                    <p class="text-lg">Conectar, inspirar y generar sentido de pertenencia en la comunidad a través del patinaje y la cultura del reciclaje, guiados por el profundo amor a nuestro entorno. Cultivar en cada niño, niña y joven un espíritu deportivo y ambientalmente consciente, capaz de construir un futuro próspero y sostenible para sus comunidades.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Visión 2028</h3>
+                    <p class="text-lg">La Fundación se proyecta para el año 2028 como una entidad líder y referente en Colombia por la gestión deportiva, ambiental y social. Se espera que tengamos nuestro propio escenario "Eco-deportivo", con una pista de patinaje y más de 250 niños, niñas y jóvenes practicando patinaje y llevando sus sueños a lo más alto. También se espera lograr que el centro de acopio comunitario tenga una sostenibilidad del 90% en sus operaciones.</p>
+                </div>
+                </div>
+            </section>
+        </div>
       </div>
     </div>
-  </section>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 </Layout>
 
 <script>
   import Swiper from "swiper/bundle";
   import "swiper/css/bundle";
 
-  var swiper = new Swiper(".swiper-container", {
+  const mainSwiper = new Swiper(".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const nestedSwipers = new Swiper(".swiper-container-nested", {
     loop: true,
     effect: 'fade',
     autoplay: {
@@ -140,4 +236,6 @@ import Layout from '../layouts/Layout.astro';
       prevEl: ".swiper-button-prev",
     },
   });
+
+  window.mainSwiper = mainSwiper;
 </script>

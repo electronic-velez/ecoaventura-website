@@ -1,24 +1,18 @@
 ---
 ---
-<header class="bg-white shadow-md">
+<header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex items-center">
-            <a href="/">
+            <a href="#" onclick="window.mainSwiper.slideTo(0)">
                 <img src="/images/aventureros.PNG" alt="EcoAventura" class="h-12">
             </a>
         </div>
         <nav class="hidden md:flex space-x-4">
-            <a href="/">Inicio</a>
-            <a href="/#historia">Historia</a>
-            <a href="/#mision-y-vision">Misión y Visión</a>
-            <div class="relative group">
-                <button class="hover:text-green-500">Proyectos</button>
-                <div class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-48">
-                    <a href="/patinaje" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Patinaje</a>
-                    <a href="/acopio" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Acopio</a>
-                    <a href="/desarrollo" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Desarrollo</a>
-                </div>
-            </div>
+            <a href="#" onclick="window.mainSwiper.slideTo(0)">Inicio</a>
+            <a href="#" onclick="window.mainSwiper.slideTo(1)">Recicla</a>
+            <a href="#" onclick="window.mainSwiper.slideTo(2)">Patinaje</a>
+            <a href="#" onclick="window.mainSwiper.slideTo(3)">Historia</a>
+            <a href="#" onclick="window.mainSwiper.slideTo(4)">Misión y Visión</a>
         </nav>
         <div class="md:hidden">
             <button id="menu-button" class="text-gray-600 hover:text-green-500 focus:outline-none">
@@ -29,12 +23,11 @@
         </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden bg-white">
-        <a href="/" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Inicio</a>
-        <a href="/#historia" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Historia</a>
-        <a href="/#mision-y-vision" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Misión y Visión</a>
-        <a href="/patinaje" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Patinaje</a>
-        <a href="/acopio" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Acopio</a>
-        <a href="/desarrollo" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Desarrollo</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-green-100" onclick="window.mainSwiper.slideTo(0); document.getElementById('mobile-menu').classList.add('hidden');">Inicio</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-green-100" onclick="window.mainSwiper.slideTo(1); document.getElementById('mobile-menu').classList.add('hidden');">Recicla</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-green-100" onclick="window.mainSwiper.slideTo(2); document.getElementById('mobile-menu').classList.add('hidden');">Patinaje</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-green-100" onclick="window.mainSwiper.slideTo(3); document.getElementById('mobile-menu').classList.add('hidden');">Historia</a>
+        <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-green-100" onclick="window.mainSwiper.slideTo(4); document.getElementById('mobile-menu').classList.add('hidden');">Misión y Visión</a>
     </div>
 </header>
 
