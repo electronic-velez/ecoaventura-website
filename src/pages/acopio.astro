@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Acopio - EcoAventura">
+  <section class="py-12 px-4 bg-green-700 text-white">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4">Centro de Acopio Comunitario (Proyecto Eco-Aventureros)</h1>
+      <p class="text-lg">Impulsando la Economía Circular y la Conciencia Ambiental, en un espacio propio. Establecimos un centro de acopio comunitario para la recolección, clasificación y venta de residuos sólidos aprovechables. Esta iniciativa generará ingresos adicionales para las familias rurales participantes y una parte para las actividades de los deportistas.</p>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 bg-gray-100">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Cómo lo hacemos</h2>
+          <p>En nuestro centro de acopio, seguimos un proceso cuidadoso para asegurarnos de que los materiales reciclables se gestionen de la manera más eficiente y sostenible posible. Desde la recolección hasta el procesamiento, cada paso está diseñado para maximizar la recuperación de recursos y minimizar el impacto ambiental.</p>
+          <h3 class="text-2xl font-bold mt-6 mb-2">Materiales que aceptamos</h3>
+          <ul>
+            <li>Plástico (PET, HDPE)</li>
+            <li>Papel y cartón</li>
+            <li>Vidrio</li>
+            <li>Metales (aluminio, acero)</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Consejos para un Reciclaje Exitoso</h2>
+          <p>Para asegurar que tus materiales puedan ser reciclados correctamente, te pedimos que los limpies y los separes antes de traerlos a nuestro centro. Aquí tienes algunos consejos:</p>
+          <ul class="list-disc list-inside">
+            <li>Lava las botellas y los envases para eliminar los restos de comida.</li>
+            <li>Aplasta las latas y las botellas de plástico para ahorrar espacio.</li>
+            <li>Separa el papel y el cartón del resto de los materiales.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Descargas</h2>
+      <p class="text-center mb-8">Descarga nuestras rutas de reciclaje para saber cuándo pasaremos por tu comunidad.</p>
+      <div class="text-center">
+        <a href="/rutas-reciclaje.pdf" download class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Descargar Rutas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Suscripción</h2>
+      <p class="text-center mb-8">¡Únete a nuestra comunidad de reciclaje! Regístrate para recibir noticias, consejos y actualizaciones sobre nuestras rutas de recolección.</p>
+      <form class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nombre</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Tu nombre">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo electrónico</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="tu@email.com">
+        </div>
+        <div class="text-center">
+          <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Suscribirme
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>

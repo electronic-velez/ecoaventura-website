@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Patinaje - EcoAventura">
+  <section class="py-12 px-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4">Escuela de Patinaje (Proyecto Aventureros en Ruedas)</h1>
+      <p class="text-lg">Formación Integral y Oportunidades para el Desarrollo Juvenil. Implementamos una escuela de patinaje como un espacio de formación deportiva y en valores. Este programa busca la prevención del consumo de sustancias psicoactivas, la violencia juvenil y la deserción escolar, ofreciendo una alternativa saludable y atractiva para el tiempo libre.</p>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Nuestros Pequeños Gigantes</h2>
+      <div class="swiper-container h-96">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+          <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+          <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
+
+  var swiper = new Swiper(".swiper-container", {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

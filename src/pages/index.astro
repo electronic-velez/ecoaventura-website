@@ -1,4 +1,4 @@
---- 
+---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -95,18 +95,26 @@ import Layout from '../layouts/Layout.astro';
 
   <section id="proyectos" class="py-12 px-4 bg-gray-100">
     <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Nuestros Proyectos</h2>
-      <div class="mb-8">
-        <h3 class="text-2xl font-bold mb-2">Escuela de Patinaje (Proyecto Aventureros en Ruedas)</h3>
-        <p class="text-lg">Formación Integral y Oportunidades para el Desarrollo Juvenil. Implementamos una escuela de patinaje como un espacio de formación deportiva y en valores. Este programa busca la prevención del consumo de sustancias psicoactivas, la violencia juvenil y la deserción escolar, ofreciendo una alternativa saludable y atractiva para el tiempo libre.</p>
-      </div>
-      <div class="mb-8">
-        <h3 class="text-2xl font-bold mb-2">Centro de Acopio Comunitario (Proyecto Eco-Aventureros)</h3>
-        <p class="text-lg">Impulsando la Economía Circular y la Conciencia Ambiental, en un espacio propio. Establecimos un centro de acopio comunitario para la recolección, clasificación y venta de residuos sólidos aprovechables. Esta iniciativa generará ingresos adicionales para las familias rurales participantes y una parte para las actividades de los deportistas.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold mb-2">Desarrollo Comunitario y Turismo Sostenible (Asociación Carmesí)</h3>
-        <p class="text-lg">Fortaleciendo el Sentido de Pertenencia y el Liderazgo Local. Aventureros es asociado de la asociación Carmesí y juntos nos hemos encargado de hacer visible nuestro territorio, resaltando su riqueza natural y cultural con el objetivo de promoverlo como un destino turístico atractivo y sostenible. Específicamente, somos la parte sostenible de la asociación y nos encargamos de realizar turismo deportivo.</p>
+      <h2 class="text-3xl font-bold mb-8 text-center">Nuestros Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/patinaje" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <img src="/images/patinaje-card.jpeg" alt="Patinaje" class="rounded-t-lg h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Escuela de Patinaje</h3>
+          </div>
+        </a>
+        <a href="/acopio" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <img src="/images/acopio-card.jpeg" alt="Acopio" class="rounded-t-lg h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Centro de Acopio</h3>
+          </div>
+        </a>
+        <a href="/desarrollo" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <img src="/images/desarrollo-card.jpeg" alt="Desarrollo Comunitario" class="rounded-t-lg h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Desarrollo Comunitario</h3>
+          </div>
+        </a>
       </div>
     </div>
   </section>

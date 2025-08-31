@@ -3,15 +3,22 @@
 <header class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex items-center">
-            <a href="#home">
+            <a href="/">
                 <img src="/images/aventureros.PNG" alt="EcoAventura" class="h-12">
             </a>
         </div>
         <nav class="hidden md:flex space-x-4">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#historia">Historia</a></li>
-            <li><a href="#mision-y-vision">Misión y Visión</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <a href="/">Inicio</a>
+            <a href="/#historia">Historia</a>
+            <a href="/#mision-y-vision">Misión y Visión</a>
+            <div class="relative group">
+                <button class="hover:text-green-500">Proyectos</button>
+                <div class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 py-2 w-48">
+                    <a href="/patinaje" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Patinaje</a>
+                    <a href="/acopio" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Acopio</a>
+                    <a href="/desarrollo" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Desarrollo</a>
+                </div>
+            </div>
         </nav>
         <div class="md:hidden">
             <button id="menu-button" class="text-gray-600 hover:text-green-500 focus:outline-none">
@@ -22,10 +29,12 @@
         </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden bg-white">
-        <a href="#home" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Inicio</a>
-        <a href="#historia" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Historia</a>
-        <a href="#mision-y-vision" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Misión y Visión</a>
-        <a href="#proyectos" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Proyectos</a>
+        <a href="/" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Inicio</a>
+        <a href="/#historia" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Historia</a>
+        <a href="/#mision-y-vision" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Misión y Visión</a>
+        <a href="/patinaje" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Patinaje</a>
+        <a href="/acopio" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Acopio</a>
+        <a href="/desarrollo" class="block px-4 py-2 text-gray-600 hover:bg-green-100">Desarrollo</a>
     </div>
 </header>
 
