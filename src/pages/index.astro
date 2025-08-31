@@ -14,7 +14,6 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/campañas de reforetacion.jpg"
                 alt="Imagen 1"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
-                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -32,7 +31,6 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/1.2.PNG"
                 alt="Imagen 2"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
-                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -50,7 +48,6 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/1.3.PNG"
                 alt="Imagen 3"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
-                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -154,9 +151,9 @@ import Layout from '../layouts/Layout.astro';
                 <h2 class="text-3xl font-bold mb-4 text-center">Nuestros Pequeños Gigantes</h2>
                 <div class="swiper-container-nested h-96">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -211,8 +208,7 @@ import Layout from '../layouts/Layout.astro';
   const mainSwiper = new Swiper(".swiper-container", {
     direction: "horizontal",
     loop: false,
-    preloadImages: false,
-    lazy: true,
+    preloadImages: true,
     on: {
       slideChange: function () {
         const currentSlide = this.slides[this.activeIndex];
