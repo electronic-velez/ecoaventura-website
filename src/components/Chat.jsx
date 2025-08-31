@@ -20,7 +20,7 @@ export default function Chat() {
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-4 right-4 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center"
+                className="fixed bottom-4 right-4 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center z-10"
                 aria-label="Abrir chat"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -31,7 +31,7 @@ export default function Chat() {
     }
 
     return (
-        <div className="fixed bottom-4 right-4 w-80 h-96 bg-white rounded-lg shadow-lg flex flex-col z-50">
+        <div className="fixed bottom-4 right-4 w-full h-full md:w-80 md:h-96 bg-white rounded-lg shadow-lg flex flex-col z-50">
             <div className="bg-green-500 text-white p-3 rounded-t-lg flex justify-between items-center">
                 <h3 className="text-lg font-bold">Asistente de Ayuda</h3>
                 <button onClick={() => setIsOpen(false)} className="text-white">
