@@ -7,12 +7,15 @@
                 <img src="/images/aventureros.PNG" alt="EcoAventura" class="h-12">
             </a>
         </div>
-        <nav class="hidden md:flex space-x-4">
+        <nav class="hidden md:flex space-x-4 items-center">
+            <div class="swiper-button-prev cursor-pointer"></div>
             <a href="#" onclick="window.mainSwiper.slideTo(0)">Inicio</a>
             <a href="#" onclick="window.mainSwiper.slideTo(1)">Recicla</a>
             <a href="#" onclick="window.mainSwiper.slideTo(2)">Patinaje</a>
             <a href="#" onclick="window.mainSwiper.slideTo(3)">Historia</a>
             <a href="#" onclick="window.mainSwiper.slideTo(4)">Misión y Visión</a>
+            <div id="slide-name" class="text-gray-600">Inicio</div>
+            <div class="swiper-button-next cursor-pointer"></div>
         </nav>
         <div class="md:hidden">
             <button id="menu-button" class="text-gray-600 hover:text-green-500 focus:outline-none">

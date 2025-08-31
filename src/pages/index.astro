@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="swiper-container h-screen">
     <div class="swiper-wrapper">
       <!-- Slide 1: Inicio -->
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-name="Inicio">
         <div class="swiper-container-nested h-full">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -14,6 +14,7 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/campañas de reforetacion.jpg"
                 alt="Imagen 1"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
+                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -31,6 +32,7 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/1.2.PNG"
                 alt="Imagen 2"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
+                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -48,6 +50,7 @@ import Layout from '../layouts/Layout.astro';
                 src="/images/1.3.PNG"
                 alt="Imagen 3"
                 class="w-full h-full object-cover filter brightness-110 saturate-110"
+                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
@@ -62,13 +65,11 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
       </div>
 
       <!-- Slide 2: Recicla -->
-      <div class="swiper-slide bg-green-100 p-8 overflow-y-auto">
+      <div class="swiper-slide bg-green-100 p-8 overflow-y-auto" data-name="Recicla">
         <div class="container mx-auto">
             <section class="py-12 px-4 bg-green-700 text-white">
                 <div class="container mx-auto text-center">
@@ -139,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 3: Patinaje -->
-      <div class="swiper-slide bg-purple-100 p-8 overflow-y-auto">
+      <div class="swiper-slide bg-purple-100 p-8 overflow-y-auto" data-name="Patinaje">
         <div class="container mx-auto">
             <section class="py-12 px-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
                 <div class="container mx-auto text-center">
@@ -153,13 +154,11 @@ import Layout from '../layouts/Layout.astro';
                 <h2 class="text-3xl font-bold mb-4 text-center">Nuestros Pequeños Gigantes</h2>
                 <div class="swiper-container-nested h-96">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
-                    <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
-                    <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje1.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje2.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="/images/patinaje3.jpeg" alt="Niños patinando" class="w-full h-full object-cover" loading="lazy"></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 </div>
             </section>
@@ -167,7 +166,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 4: Historia -->
-      <div class="swiper-slide bg-gray-100 p-8 overflow-y-auto">
+      <div class="swiper-slide bg-gray-100 p-8 overflow-y-auto" data-name="Historia">
         <div class="container mx-auto">
             <section id="historia" class="py-12 px-4">
                 <div class="container mx-auto">
@@ -179,7 +178,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 5: Misión y Visión -->
-      <div class="swiper-slide bg-white p-8 overflow-y-auto">
+      <div class="swiper-slide bg-white p-8 overflow-y-auto" data-name="Misión y Visión">
         <div class="container mx-auto">
             <section id="mision-y-vision" class="py-12 px-4">
                 <div class="container mx-auto">
@@ -196,10 +195,12 @@ import Layout from '../layouts/Layout.astro';
             </section>
         </div>
       </div>
+      <!-- Slide 6: Final -->
+      <div class="swiper-slide bg-gray-800 text-white flex flex-col items-center justify-center text-center p-8" data-name="Final">
+        <h2 class="text-3xl font-bold mb-4">¡Has llegado al final!</h2>
+        <p class="text-lg">Te invitamos a regresar a explorar o a ver nuestro menú principal.</p>
+      </div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
 </Layout>
 
@@ -209,14 +210,15 @@ import Layout from '../layouts/Layout.astro';
 
   const mainSwiper = new Swiper(".swiper-container", {
     direction: "horizontal",
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    loop: false,
+    preloadImages: false,
+    lazy: true,
+    on: {
+      slideChange: function () {
+        const currentSlide = this.slides[this.activeIndex];
+        const slideName = currentSlide.getAttribute('data-name');
+        document.getElementById('slide-name').textContent = slideName;
+      },
     },
   });
 
@@ -230,10 +232,6 @@ import Layout from '../layouts/Layout.astro';
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
   });
 
