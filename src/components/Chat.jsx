@@ -20,7 +20,7 @@ export default function Chat() {
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-4 right-4 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center z-10"
+                className="fixed bottom-4 right-4 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center z-50"
                 aria-label="Abrir chat"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
