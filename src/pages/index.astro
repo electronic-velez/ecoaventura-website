@@ -3,6 +3,42 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Fundación EcoAventura">
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="/">
+          <img src="/images/aventureros.PNG" alt="EcoAventura" class="h-12">
+        </a>
+        <span id="slide-name" class="text-gray-800 text-lg font-bold">Inicio</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button id="swiper-button-prev" class="text-gray-600 hover:text-green-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="swiper-button-next" class="text-gray-600 hover:text-green-500 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <button id="menu-button" class="md:hidden text-gray-600 hover:text-green-500 focus:outline-none">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md fixed top-16 left-0 right-0 z-40">
+    <div class="px-4 py-2 space-y-1">
+      <a href="#" onclick="window.mainSwiper.slideTo(0); document.getElementById('mobile-menu').classList.add('hidden');" class="block text-gray-600 hover:bg-green-100 py-2">Inicio</a>
+      <a href="#" onclick="window.mainSwiper.slideTo(1); document.getElementById('mobile-menu').classList.add('hidden');" class="block text-gray-600 hover:bg-green-100 py-2">Recicla</a>
+      <a href="#" onclick="window.mainSwiper.slideTo(2); document.getElementById('mobile-menu').classList.add('hidden');" class="block text-gray-600 hover:bg-green-100 py-2">Patinaje</a>
+      <a href="#" onclick="window.mainSwiper.slideTo(3); document.getElementById('mobile-menu').classList.add('hidden');" class="block text-gray-600 hover:bg-green-100 py-2">Historia</a>
+      <a href="#" onclick="window.mainSwiper.slideTo(4); document.getElementById('mobile-menu').classList.add('hidden');" class="block text-gray-600 hover:bg-green-100 py-2">Misión y Visión</a>
+    </div>
+  </div>
   <div class="swiper-container h-screen">
     <div class="swiper-wrapper">
       <!-- Slide 1: Inicio -->
@@ -66,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 2: Recicla -->
-      <div class="swiper-slide bg-green-100 p-8 overflow-y-auto" data-name="Recicla">
+      <div class="swiper-slide bg-green-100 p-8 pt-24" data-name="Recicla">
         <div class="container mx-auto">
             <section class="py-12 px-4 bg-green-700 text-white">
                 <div class="container mx-auto text-center">
@@ -137,7 +173,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 3: Patinaje -->
-      <div class="swiper-slide bg-purple-100 p-8 overflow-y-auto" data-name="Patinaje">
+      <div class="swiper-slide bg-purple-100 p-8 pt-24" data-name="Patinaje">
         <div class="container mx-auto">
             <section class="py-12 px-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white">
                 <div class="container mx-auto text-center">
@@ -163,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 4: Historia -->
-      <div class="swiper-slide bg-gray-100 p-8 overflow-y-auto" data-name="Historia">
+      <div class="swiper-slide bg-gray-100 p-8 pt-24" data-name="Historia">
         <div class="container mx-auto">
             <section id="historia" class="py-12 px-4">
                 <div class="container mx-auto">
@@ -175,7 +211,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Slide 5: Misión y Visión -->
-      <div class="swiper-slide bg-white p-8 overflow-y-auto" data-name="Misión y Visión">
+      <div class="swiper-slide bg-white p-8 pt-24" data-name="Misión y Visión">
         <div class="container mx-auto">
             <section id="mision-y-vision" class="py-12 px-4">
                 <div class="container mx-auto">
@@ -205,11 +241,20 @@ import Layout from '../layouts/Layout.astro';
   import Swiper from "swiper/bundle";
   import "swiper/css/bundle";
 
+  // Initialize the main horizontal Swiper
   const mainSwiper = new Swiper(".swiper-container", {
     direction: "horizontal",
     loop: false,
     preloadImages: true,
+    navigation: {
+      nextEl: '#swiper-button-next',
+      prevEl: '#swiper-button-prev',
+    },
     on: {
+      init: function () {
+        const initialSlideName = this.slides[this.activeIndex].getAttribute('data-name');
+        document.getElementById('slide-name').textContent = initialSlideName;
+      },
       slideChange: function () {
         const currentSlide = this.slides[this.activeIndex];
         const slideName = currentSlide.getAttribute('data-name');
@@ -218,6 +263,7 @@ import Layout from '../layouts/Layout.astro';
     },
   });
 
+  // Initialize any nested vertical Swipers if needed for long content
   const nestedSwipers = new Swiper(".swiper-container-nested", {
     loop: true,
     effect: 'fade',
@@ -229,6 +275,12 @@ import Layout from '../layouts/Layout.astro';
       el: ".swiper-pagination",
       clickable: true,
     },
+  });
+
+  // Mobile menu functionality
+  document.getElementById("menu-button").addEventListener("click", function () {
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.toggle("hidden");
   });
 
   window.mainSwiper = mainSwiper;
